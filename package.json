@@ -1,0 +1,17 @@
+{
+  "title": "AbuseBayes",
+  "name": "abusebayes",
+  "version": "0.0.1",
+  "description": "Filter your twitter feed based for abuse using Bayesian filtering",
+  "repository": "git@github.com:simonv3/abuse-bayes-firefox-add-on.git",
+  "main": "index.js",
+  "author": "Simon Vansintjan",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}

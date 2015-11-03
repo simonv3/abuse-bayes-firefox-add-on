@@ -1,0 +1,26 @@
+{
+  "name": "abuse-bayes-firefox-add-on",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/simonv3/abuse-bayes-firefox-add-on",
+  "authors": [
+    "Simon <svansintjan@gmail.com>"
+  ],
+  "keywords": [
+    "bayes",
+    "abuse",
+    "firefox",
+    "add-on"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
