@@ -13,5 +13,9 @@
   "license": "MIT",
   "keywords": [
     "jetpack"
-  ]
+  ],
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "passport": "^0.3.0"
+  }
 }

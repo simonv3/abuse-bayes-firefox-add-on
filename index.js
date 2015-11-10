@@ -2,7 +2,7 @@
 var pageMod = require("sdk/page-mod");
 // Import the self API
 var self = require("sdk/self");
-var Request = require('sdk/request').Request;
+var eventFnc = require('./lib/eventFunctions.js');
 
 // Create a page-mod
 // It will run a script whenever a ".org" URL is loaded
@@ -16,17 +16,8 @@ pageMod.PageMod({
   contentStyleFile: './abuse.css',
   onAttach: function(worker) {
     worker.port.on('foundTweet', function(data) {
-      console.log('found a tweet on the index');
-      Request({
-        url: 'http://localhost:3000/api/v1/classify',
-        onComplete: function (response) {
-          console.log(response.json);
-          if (response.json.abuse) {
-            worker.port.emit('foundAbuse', data)
-          }
-        },
-        content: data
-      }).post();
+      eventFnc.foundTweet(data, worker)
     });
+    worker.port.on('registerAbuse', eventFnc.registerAbuse);
   }
 });
